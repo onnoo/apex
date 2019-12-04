@@ -32,9 +32,6 @@ cmdclass = {}
 ext_modules = []
 
 if "--pyprof" in sys.argv:
-    with open('requirements.txt') as f:
-        required_packages = f.read().splitlines()
-        pipmain(["install"] + required_packages)
     try:
         sys.argv.remove("--pyprof")
     except:
