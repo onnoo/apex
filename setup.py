@@ -59,7 +59,7 @@ def check_cuda_torch_binary_vs_bare_metal(cuda_dir):
     release_idx = output.index("release") + 1
     release = output[release_idx].split(".")
     bare_metal_major = release[0]
-    bare_metal_minor = release[1][0]
+    bare_metal_minor = 1 # release[1][0]
     torch_binary_major = torch.version.cuda.split(".")[0]
     torch_binary_minor = torch.version.cuda.split(".")[1]
 
